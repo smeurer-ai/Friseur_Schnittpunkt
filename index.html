@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Friseursalon Schnittpunkt in Kollnburg — Ihr Friseur für Damen, Herren und Kinder. Hochzeitsstyling, Schnitt, Farbe und mehr. Inhaberin: Michaela Köppl.">
+  <title>Friseursalon Schnittpunkt — Kollnburg</title>
+
+  <!-- Local Fonts & Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet (lokal, kein CDN) -->
+  <link rel="stylesheet" href="leaflet/leaflet.min.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Friseursalon Schnittpunkt – Startseite">
+        Schnittpunkt<span class="dot" aria-hidden="true">.</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#hochzeit">Hochzeit</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+
+      <a href="buchen.html" class="btn btn--pink nav__cta" aria-label="Termin buchen">
+        Termin buchen
+      </a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Mobilnavigation" aria-modal="true">
+    <a href="#leistungen" class="mobile-link">Leistungen</a>
+    <a href="#hochzeit" class="mobile-link">Hochzeit</a>
+    <a href="#ueber-uns" class="mobile-link">Über uns</a>
+    <a href="#preise" class="mobile-link">Preise</a>
+    <a href="#kontakt" class="mobile-link">Kontakt</a>
+    <a href="buchen.html" class="btn btn--pink mobile-cta">Termin buchen</a>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Willkommen">
+    <div class="hero__bg" aria-hidden="true">
+      <img
+        src="images/hero.jpg"
+        alt=""
+        class="hero__bg-img"
+        role="presentation"
+        onerror="this.style.display='none'"
+      >
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__content container">
+      <p class="hero__eyebrow fade-in">Friseursalon · Kollnburg</p>
+
+      <h1 class="hero__title fade-in fade-in-delay-1">
+        <span class="line">Ihr Stil.</span>
+        <span class="line line--dim">Unser Handwerk.</span>
+      </h1>
+
+      <p class="hero__subtitle fade-in fade-in-delay-2">
+        Friseursalon Schnittpunkt · Inhaberin Michaela Köppl
+        <br>Nur nach Terminvereinbarung — persönlich und mit Leidenschaft.
+      </p>
+
+      <div class="hero__cta fade-in fade-in-delay-3">
+        <a href="buchen.html" class="btn btn--pink">Jetzt Termin buchen</a>
+        <a href="#leistungen" class="btn btn--outline-blue">Leistungen entdecken</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-arrow"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       LEISTUNGEN
+  ══════════════════════════════════════════════════════ -->
+  <section class="section" id="leistungen" aria-labelledby="leistungen-title">
+    <div class="container">
+      <span class="section-label fade-in">Leistungen</span>
+      <h2 class="section-title fade-in fade-in-delay-1" id="leistungen-title">
+        Unsere <span class="accent">Leistungen</span>
+      </h2>
+      <p class="section-intro fade-in fade-in-delay-2">
+        Von klassisch bis modern — wir setzen Ihre Wünsche mit Erfahrung und Sorgfalt um.
+      </p>
+
+      <div class="leistungen__grid">
+        <article class="leistung-card fade-in fade-in-delay-1">
+          <span class="leistung-card__icon" aria-hidden="true">✂️</span>
+          <h3 class="leistung-card__title">Damen</h3>
+          <p class="leistung-card__text">
+            Von der Trendfarbe bis zum klassischen Schnitt — wir setzen Ihre Wünsche um.
+            Sorgfältig, individuell und immer mit einem offenen Ohr für Ihre Ideen.
+          </p>
+        </article>
+
+        <article class="leistung-card fade-in fade-in-delay-2">
+          <span class="leistung-card__icon" aria-hidden="true">💈</span>
+          <h3 class="leistung-card__title">Herren</h3>
+          <p class="leistung-card__text">
+            Haarschnitt, Bart und mehr — präzise und stilsicher.
+            Von der gepflegten Alltags-Frisur bis zum markanten Barbercut.
+          </p>
+        </article>
+
+        <article class="leistung-card fade-in fade-in-delay-3">
+          <span class="leistung-card__icon" aria-hidden="true">⭐</span>
+          <h3 class="leistung-card__title">Kinder</h3>
+          <p class="leistung-card__text">
+            Sanfte Hände und Geduld für die kleinen Gäste.
+            Ein entspanntes Erlebnis, das Kindern und Eltern gut tut.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       HOCHZEIT & ANLÄSSE
+  ══════════════════════════════════════════════════════ -->
+  <section class="section section--alt hochzeit" id="hochzeit" aria-labelledby="hochzeit-title">
+    <div class="container">
+      <div class="hochzeit__inner">
+
+        <!-- Bild links -->
+        <div class="hochzeit__image-wrap fade-in">
+          <img
+            src="images/hochzeit/haupt.jpg"
+            alt="Brautfrisur von Friseursalon Schnittpunkt"
+            onerror="this.style.display='none'"
+          >
+          <div class="hochzeit__img-placeholder" aria-hidden="true">
+            Hochzeitsbild
+          </div>
+        </div>
+
+        <!-- Inhalt rechts -->
+        <div class="hochzeit__content fade-in fade-in-delay-1">
+          <span class="section-label">Hochzeit &amp; Anlässe</span>
+          <div class="hochzeit__content-head">
+            <h2 id="hochzeit-title">Traumfrisuren für den schönsten Tag</h2>
+          </div>
+
+          <p class="hochzeit__text">
+            Ob Braut, Ehrendame oder festlicher Anlass — wir zaubern Ihnen die perfekte Frisur.
+            Mit viel Liebe zum Detail und Erfahrung in Hochzeitsstyling begleiten wir Sie
+            vom ersten Probetermin bis zum großen Tag.
+          </p>
+
+          <!-- Minigalerie -->
+          <div class="hochzeit__gallery" role="list" aria-label="Hochzeits-Bildergalerie">
+            <div class="hochzeit__gallery-item fade-in fade-in-delay-1" role="listitem" data-src="images/hochzeit/1.jpg" data-index="0" tabindex="0" aria-label="Hochzeitsfoto 1">
+              <img src="images/hochzeit/1.jpg" alt="Hochzeitsfrisur 1" onerror="this.style.display='none'">
+            </div>
+            <div class="hochzeit__gallery-item fade-in fade-in-delay-2" role="listitem" data-src="images/hochzeit/2.jpg" data-index="1" tabindex="0" aria-label="Hochzeitsfoto 2">
+              <img src="images/hochzeit/2.jpg" alt="Hochzeitsfrisur 2" onerror="this.style.display='none'">
+            </div>
+            <div class="hochzeit__gallery-item fade-in fade-in-delay-3" role="listitem" data-src="images/hochzeit/3.jpg" data-index="2" tabindex="0" aria-label="Hochzeitsfoto 3">
+              <img src="images/hochzeit/3.jpg" alt="Hochzeitsfrisur 3" onerror="this.style.display='none'">
+            </div>
+            <div class="hochzeit__gallery-item fade-in fade-in-delay-4" role="listitem" data-src="images/hochzeit/4.jpg" data-index="3" tabindex="0" aria-label="Hochzeitsfoto 4">
+              <img src="images/hochzeit/4.jpg" alt="Hochzeitsfrisur 4" onerror="this.style.display='none'">
+            </div>
+            <div class="hochzeit__gallery-item fade-in fade-in-delay-5" role="listitem" data-src="images/hochzeit/5.jpg" data-index="4" tabindex="0" aria-label="Hochzeitsfoto 5">
+              <img src="images/hochzeit/5.jpg" alt="Hochzeitsfrisur 5" onerror="this.style.display='none'">
+            </div>
+            <div class="hochzeit__gallery-item fade-in fade-in-delay-6" role="listitem" data-src="images/hochzeit/6.jpg" data-index="5" tabindex="0" aria-label="Hochzeitsfoto 6">
+              <img src="images/hochzeit/6.jpg" alt="Hochzeitsfrisur 6" onerror="this.style.display='none'">
+            </div>
+          </div>
+
+          <a href="tel:+499942801584" class="btn btn--pink">
+            Hochzeitstermin anfragen
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       ÜBER UNS
+  ══════════════════════════════════════════════════════ -->
+  <section class="section" id="ueber-uns" aria-labelledby="ueber-title">
+    <div class="container">
+      <div class="ueber__inner">
+
+        <!-- Portrait -->
+        <div class="ueber__portrait fade-in">
+          <div class="ueber__portrait-accent" aria-hidden="true"></div>
+          <img
+            src="images/portrait.jpg"
+            alt="Michaela Köppl, Inhaberin Friseursalon Schnittpunkt"
+            onerror="this.style.display='none'"
+          >
+          <div class="ueber__portrait-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="22" r="14" stroke="white" stroke-width="2"/>
+              <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="white" stroke-width="2"/>
+            </svg>
+            Portrait Foto
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="ueber__text-content fade-in fade-in-delay-1">
+          <span class="section-label">Über uns</span>
+          <h2 class="ueber__name" id="ueber-title">Michaela Köppl</h2>
+          <span class="ueber__role">Inhaberin</span>
+
+          <p class="ueber__text">
+            Ich bin Michaela Köppl, Inhaberin des Friseursalons Schnittpunkt in Kollnburg.
+            Seit <strong>[JAHR]</strong> lebe ich meine Leidenschaft für Haare und sorge dafür,
+            dass sich jeder Gast bei uns wohlfühlt. Unser kleiner Salon steht für persönliche
+            Betreuung, ehrliche Beratung und handwerkliche Sorgfalt.
+          </p>
+
+          <p class="ueber__text">
+            Bei uns sind Sie nicht eine Nummer — wir nehmen uns Zeit für Ihre Wünsche
+            und finden gemeinsam den Stil, der wirklich zu Ihnen passt.
+          </p>
+
+          <div class="ueber__badge">
+            <span aria-hidden="true">✨</span>
+            <span>Unser Team bildet sich regelmäßig weiter — zuletzt bei Europas bestem Barber 2026.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Teamfoto -->
+      <div class="ueber__team fade-in">
+        <div class="ueber__team-placeholder" role="img" aria-label="Teamfoto Platzhalter">
+          Teamfoto · images/team.jpg
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       GALERIE
+  ══════════════════════════════════════════════════════ -->
+  <section class="section section--alt" id="galerie" aria-labelledby="galerie-title">
+    <div class="container">
+      <span class="section-label fade-in">Portfolio</span>
+      <h2 class="section-title fade-in fade-in-delay-1" id="galerie-title">
+        Unsere <span class="accent">Arbeiten</span>
+      </h2>
+      <p class="section-intro fade-in fade-in-delay-2">
+        Einblicke aus unserem Alltag — Schnitte, Farben und Frisuren, die für sich sprechen.
+      </p>
+
+      <div class="galerie__grid fade-in fade-in-delay-1" role="list" aria-label="Galerie">
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="0" data-src="images/galerie/1.jpg" aria-label="Galeriebild 1">
+          <img src="images/galerie/1.jpg" alt="Frisur 1" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">01</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="1" data-src="images/galerie/2.jpg" aria-label="Galeriebild 2">
+          <img src="images/galerie/2.jpg" alt="Frisur 2" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">02</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="2" data-src="images/galerie/3.jpg" aria-label="Galeriebild 3">
+          <img src="images/galerie/3.jpg" alt="Frisur 3" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">03</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="3" data-src="images/galerie/4.jpg" aria-label="Galeriebild 4">
+          <img src="images/galerie/4.jpg" alt="Frisur 4" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">04</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="4" data-src="images/galerie/5.jpg" aria-label="Galeriebild 5">
+          <img src="images/galerie/5.jpg" alt="Frisur 5" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">05</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="5" data-src="images/galerie/6.jpg" aria-label="Galeriebild 6">
+          <img src="images/galerie/6.jpg" alt="Frisur 6" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">06</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="6" data-src="images/galerie/7.jpg" aria-label="Galeriebild 7">
+          <img src="images/galerie/7.jpg" alt="Frisur 7" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">07</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="7" data-src="images/galerie/8.jpg" aria-label="Galeriebild 8">
+          <img src="images/galerie/8.jpg" alt="Frisur 8" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">08</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="8" data-src="images/galerie/9.jpg" aria-label="Galeriebild 9">
+          <img src="images/galerie/9.jpg" alt="Frisur 9" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">09</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="9" data-src="images/galerie/10.jpg" aria-label="Galeriebild 10">
+          <img src="images/galerie/10.jpg" alt="Frisur 10" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">10</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="10" data-src="images/galerie/11.jpg" aria-label="Galeriebild 11">
+          <img src="images/galerie/11.jpg" alt="Frisur 11" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">11</span>
+        </div>
+        <div class="galerie__item" role="listitem" tabindex="0" data-index="11" data-src="images/galerie/12.jpg" aria-label="Galeriebild 12">
+          <img src="images/galerie/12.jpg" alt="Frisur 12" onerror="this.style.display='none'">
+          <div class="galerie__item-overlay" aria-hidden="true"></div>
+          <span class="galerie__placeholder-label" aria-hidden="true">12</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Schließen">✕</button>
+    <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Vorheriges Bild">&#8249;</button>
+    <div class="lightbox__placeholder" id="lightboxContent" aria-live="polite">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" style="display:none">
+      <div id="lightboxFallback">
+        <p style="color:rgba(255,255,255,0.25);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase">Bild nicht vorhanden</p>
+        <p id="lightboxLabel" style="color:rgba(255,255,255,0.15);font-size:0.7rem;margin-top:8px"></p>
+      </div>
+    </div>
+    <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Nächstes Bild">&#8250;</button>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       PREISE
+  ══════════════════════════════════════════════════════ -->
+  <section class="section" id="preise" aria-labelledby="preise-title">
+    <div class="container">
+      <span class="section-label fade-in">Preisliste</span>
+      <h2 class="section-title fade-in fade-in-delay-1" id="preise-title">
+        Unsere <span class="accent">Preise</span>
+      </h2>
+
+      <!-- Tabs -->
+      <div class="preise__tabs fade-in fade-in-delay-2" role="tablist" aria-label="Preiskategorien">
+        <button class="preise__tab active" role="tab" aria-selected="true" aria-controls="panel-damen" id="tab-damen">Damen</button>
+        <button class="preise__tab" role="tab" aria-selected="false" aria-controls="panel-herren" id="tab-herren">Herren</button>
+        <button class="preise__tab" role="tab" aria-selected="false" aria-controls="panel-kinder" id="tab-kinder">Kinder</button>
+        <button class="preise__tab" role="tab" aria-selected="false" aria-controls="panel-hochzeit" id="tab-hochzeit">Hochzeit &amp; Anlässe</button>
+      </div>
+
+      <!-- Panel Damen -->
+      <div class="preise__panel active fade-in fade-in-delay-3" id="panel-damen" role="tabpanel" aria-labelledby="tab-damen">
+        <ul class="preise__list">
+          <li class="preise__item">
+            <span class="preise__item-name">Waschen, Schneiden, Föhnen</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Färben (Ansatz)</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Färben (komplett)</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Strähnchen / Balayage</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Dauerwelle</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Hochsteckfrisur</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Panel Herren -->
+      <div class="preise__panel" id="panel-herren" role="tabpanel" aria-labelledby="tab-herren">
+        <ul class="preise__list">
+          <li class="preise__item">
+            <span class="preise__item-name">Haarschnitt</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Haarschnitt + Bartpflege</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Bart schneiden / rasieren</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Panel Kinder -->
+      <div class="preise__panel" id="panel-kinder" role="tabpanel" aria-labelledby="tab-kinder">
+        <ul class="preise__list">
+          <li class="preise__item">
+            <span class="preise__item-name">Kinderhaarschnitt (bis 12 J.)</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Panel Hochzeit -->
+      <div class="preise__panel" id="panel-hochzeit" role="tabpanel" aria-labelledby="tab-hochzeit">
+        <ul class="preise__list">
+          <li class="preise__item">
+            <span class="preise__item-name">Brautfrisur inkl. Probe</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Frisur Ehrendame</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+          <li class="preise__item">
+            <span class="preise__item-name">Festliche Hochsteckfrisur</span>
+            <span class="preise__item-price">ab [PREIS] €</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="preise__hint fade-in">
+        Alle Preise inkl. Beratung. Preise können je nach Aufwand variieren.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       ÖFFNUNGSZEITEN
+  ══════════════════════════════════════════════════════ -->
+  <section class="section section--alt oeffnungszeiten" id="oeffnungszeiten" aria-labelledby="oeffnungszeiten-title">
+    <div class="container">
+      <span class="section-label fade-in">Wann wir da sind</span>
+      <h2 class="section-title fade-in fade-in-delay-1" id="oeffnungszeiten-title">
+        Öffnungs<span class="accent">zeiten</span>
+      </h2>
+
+      <div class="oeffnungszeiten__card fade-in fade-in-delay-2">
+        <ul class="oeffnungszeiten__list" aria-label="Öffnungszeiten">
+          <li class="oeffnungszeiten__row">
+            <span class="oeffnungszeiten__day">Montag – Freitag</span>
+            <span class="oeffnungszeiten__time">[UHRZEIT]</span>
+          </li>
+          <li class="oeffnungszeiten__row">
+            <span class="oeffnungszeiten__day">Samstag</span>
+            <span class="oeffnungszeiten__time">[UHRZEIT]</span>
+          </li>
+          <li class="oeffnungszeiten__row">
+            <span class="oeffnungszeiten__day">Sonntag</span>
+            <span class="oeffnungszeiten__time closed">Geschlossen</span>
+          </li>
+        </ul>
+
+        <div class="oeffnungszeiten__notice" role="note">
+          <span aria-hidden="true">📅</span>
+          <span>Wir bitten um Terminvereinbarung</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       KONTAKT
+  ══════════════════════════════════════════════════════ -->
+  <section class="section" id="kontakt" aria-labelledby="kontakt-title">
+    <div class="container">
+      <span class="section-label fade-in">Kontakt &amp; Buchung</span>
+      <h2 class="section-title fade-in fade-in-delay-1" id="kontakt-title">
+        So finden Sie <span class="accent">uns</span>
+      </h2>
+
+      <div class="kontakt__inner">
+
+        <!-- Info -->
+        <div class="kontakt__info fade-in fade-in-delay-1">
+          <p class="kontakt__phone-label">Anrufen &amp; Termin vereinbaren</p>
+          <a href="tel:+499942801584" class="kontakt__phone">09942 801584</a>
+
+          <div class="kontakt__actions">
+            <a href="buchen.html" class="btn btn--pink">Online buchen</a>
+            <a href="tel:+499942801584" class="btn btn--outline-white">Jetzt anrufen</a>
+          </div>
+
+          <div class="kontakt__details">
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">📍</div>
+              <div class="kontakt__detail-text">
+                <strong>Adresse</strong>
+                Viechtacherstr. 1<br>94262 Kollnburg
+              </div>
+            </div>
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">📞</div>
+              <div class="kontakt__detail-text">
+                <strong>Telefon</strong>
+                <a href="tel:+499942801584">09942 801584</a>
+              </div>
+            </div>
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">✉️</div>
+              <div class="kontakt__detail-text">
+                <strong>E-Mail</strong>
+                [EMAIL@BEISPIEL.DE]
+              </div>
+            </div>
+            <div class="kontakt__detail">
+              <div class="kontakt__detail-icon" aria-hidden="true">🕐</div>
+              <div class="kontakt__detail-text">
+                <strong>Buchung</strong>
+                Nur nach Terminvereinbarung
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karte -->
+        <div class="kontakt__map fade-in fade-in-delay-2">
+          <div id="map" aria-label="Standortkarte Friseursalon Schnittpunkt Kollnburg"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        Schnittpunkt<span class="dot">.</span>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer-Navigation">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+      <p class="footer__copy">
+        &copy; 2026 Friseursalon Schnittpunkt &middot; Michaela Köppl
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts (lokal) -->
+  <script src="leaflet/leaflet.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

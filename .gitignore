@@ -1,0 +1,22 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporäre Dateien
+*.tmp
+*.bak
+*.swp
+
+# Logs
+*.log
+
+# Node (falls später benötigt)
+node_modules/
+npm-debug.log*
