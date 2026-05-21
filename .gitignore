@@ -20,3 +20,9 @@ desktop.ini
 # Node (falls später benötigt)
 node_modules/
 npm-debug.log*
+
+# Claude Code (interne Dateien, nicht Teil der Website)
+.agents/
+.claude/
+skills-lock.json
+docs/superpowers/

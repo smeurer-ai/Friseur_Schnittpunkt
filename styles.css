@@ -566,6 +566,11 @@ p {
   display: block;
 }
 
+.leistung-card__icon--svg {
+  line-height: 0;
+  color: var(--color-text);
+}
+
 .leistung-card__title {
   font-family: var(--font-display);
   font-weight: 700;
